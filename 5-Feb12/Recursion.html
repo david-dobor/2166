@@ -177,7 +177,7 @@ div#notebook {
 <h1 id="Some-Basic-Recursive-Algorithms">Some Basic Recursive Algorithms<a class="anchor-link" href="#Some-Basic-Recursive-Algorithms">&#182;</a></h1><p>Sometimes the solution to a problem with a given set of inputs can be reduced to the solution to the same problem but with smaller input values. The following are all examples of such problems.</p>
 <blockquote><p>We call an algorithm recursive if it solves a problem by reducing it to an instance of the same problem with smaller input values.</p>
 </blockquote>
-<h3 id="Example-1-(Section-5.4)-A-Recursive-Algorithm-for-Computing-n-Factorial">Example 1 (Section 5.4) A Recursive Algorithm for Computing n Factorial<a class="anchor-link" href="#Example-1-(Section-5.4)-A-Recursive-Algorithm-for-Computing-n-Factorial">&#182;</a></h3>
+<h3 id="Example-1-(Section-5.4):-A-Recursive-Algorithm-for-Computing-n-Factorial">Example 1 (Section 5.4): A Recursive Algorithm for Computing n Factorial<a class="anchor-link" href="#Example-1-(Section-5.4):-A-Recursive-Algorithm-for-Computing-n-Factorial">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -225,7 +225,7 @@ factorial of 70:   1197857166996989179607278372168909873645893814254642585755536
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example-2-(Section-5.4)-A-Recursive-Algorithm-for-Computing-Powers">Example 2 (Section 5.4) A Recursive Algorithm for Computing Powers<a class="anchor-link" href="#Example-2-(Section-5.4)-A-Recursive-Algorithm-for-Computing-Powers">&#182;</a></h3>
+<h3 id="Example-2-(Section-5.4):-A-Recursive-Algorithm-for-Computing-Powers">Example 2 (Section 5.4): A Recursive Algorithm for Computing Powers<a class="anchor-link" href="#Example-2-(Section-5.4):-A-Recursive-Algorithm-for-Computing-Powers">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -272,67 +272,13 @@ factorial of 70:   1197857166996989179607278372168909873645893814254642585755536
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example-3-(Question-8,-Section-5.4)-A-Recursive-Algorithm-for-Finding-the-Sum-of-the-First-n-Integers">Example 3 (Question 8, Section 5.4) A Recursive Algorithm for Finding the Sum of the First n Integers<a class="anchor-link" href="#Example-3-(Question-8,-Section-5.4)-A-Recursive-Algorithm-for-Finding-the-Sum-of-the-First-n-Integers">&#182;</a></h3>
+<h3 id="Example-3-(Known-as-a-Progrmming-Interview-Question):-Reversing-a-Sequence-with-Recursion">Example 3 (Known as a Progrmming Interview Question): Reversing a Sequence with Recursion<a class="anchor-link" href="#Example-3-(Known-as-a-Progrmming-Interview-Question):-Reversing-a-Sequence-with-Recursion">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-  <span class="sd">&quot;&quot;&quot;Return the sum of the first n numbers of sequence S.&quot;&quot;&quot;</span>
-  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">return</span> <span class="mi">0</span>
-  <span class="k">else</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">S</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">S</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">303</span><span class="p">]</span>
-<span class="k">print</span> <span class="s">&quot;Given the sequence of numbers: &quot;</span><span class="p">,</span> <span class="n">S</span>
-<span class="k">print</span> <span class="s">&quot;The sum of the first 2 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">&quot;The sum of the first 3 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">&quot;The sum of the first 4 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">&quot;The sum of the first 5 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="k">print</span> <span class="s">&quot;The sum of the first 8 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Given the sequence of numbers:  [32, 2, 16, 4, 8, 101, 202, 303]
-The sum of the first 2 elements:  34
-The sum of the first 3 elements:  50
-The sum of the first 4 elements:  54
-The sum of the first 5 elements:  62
-The sum of the first 8 elements:  668
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example-4-(Known-as-a-Progrmming-Interview-Question)-Reversing-a-Sequence-with-Recursion">Example 4 (Known as a Progrmming Interview Question) Reversing a Sequence with Recursion<a class="anchor-link" href="#Example-4-(Known-as-a-Progrmming-Interview-Question)-Reversing-a-Sequence-with-Recursion">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
@@ -372,13 +318,13 @@ Recursively reversed sequence:  [303, 202, 101, 8, 4, 16, 2, 32]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example-5-(Known-as-a-Progrmming-Interview-Question)-Reversing-a-Sequence-Iteratively">Example 5 (Known as a Progrmming Interview Question) Reversing a Sequence Iteratively<a class="anchor-link" href="#Example-5-(Known-as-a-Progrmming-Interview-Question)-Reversing-a-Sequence-Iteratively">&#182;</a></h3>
+<h3 id="Example-4-(Known-as-a-Progrmming-Interview-Question):-Reversing-a-Sequence-Iteratively">Example 4 (Known as a Progrmming Interview Question): Reversing a Sequence Iteratively<a class="anchor-link" href="#Example-4-(Known-as-a-Progrmming-Interview-Question):-Reversing-a-Sequence-Iteratively">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">reverse_iterative</span><span class="p">(</span><span class="n">S</span><span class="p">):</span>
@@ -423,13 +369,13 @@ Iteratively reversed sequence:  [303, 202, 101, 8, 4, 16, 2, 32]
 <p>As an aside, the recursive algorithm for reversing the sequence is tail-recursive, meaning that any recursive call made from one context is the very last operation in that context, with the return value of the recursive call (if any) immediately returned by the enclosing recursion. An examle of <em>non</em>-tail-recursive algorthm is the <code>factorial</code> function above. It is non-tail-recursive because of the additional multiplication by $n$ in the <code>return n * factorial(n-1)</code> call. This multiplication is carried out <em>after</em> the recursive call is completed.</p>
 <p>Any tail-recursion can be reimplemented nonrecursively by enclosing the body in a loop for repetition, and replacing a recursive call with new parameters by a reassignment of the existing parameters to those values.</p>
 <p>We show this for the tail recursive algorithm for <code>binary_search</code>. We give both recursive and iterative implementations.</p>
-<h3 id="Binary-Search-Again">Binary Search Again<a class="anchor-link" href="#Binary-Search-Again">&#182;</a></h3>
+<h3 id="Example-5:-Binary-Search-Again">Example 5: Binary Search Again<a class="anchor-link" href="#Example-5:-Binary-Search-Again">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
@@ -504,18 +450,124 @@ Element 6 is found in sequence S?   False
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example-6-(Question-8,-Section-5.4),-A-Recursive-Algorithm-for-Finding-the-Sum-of-the-First-n-Integers">Example 6 (Question 8, Section 5.4), A Recursive Algorithm for Finding the Sum of the First n Integers<a class="anchor-link" href="#Example-6-(Question-8,-Section-5.4),-A-Recursive-Algorithm-for-Finding-the-Sum-of-the-First-n-Integers">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Return the sum of the first n numbers of sequence S.&quot;&quot;&quot;</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">0</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">S</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">S</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">303</span><span class="p">]</span>
+<span class="k">print</span> <span class="s">&quot;Given the sequence of numbers: &quot;</span><span class="p">,</span> <span class="n">S</span>
+<span class="k">print</span> <span class="s">&quot;The sum of the first 2 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">&quot;The sum of the first 3 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">&quot;The sum of the first 4 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">&quot;The sum of the first 5 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">&quot;The sum of the first 8 elements: &quot;</span><span class="p">,</span> <span class="n">linear_sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Given the sequence of numbers:  [32, 2, 16, 4, 8, 101, 202, 303]
+The sum of the first 2 elements:  34
+The sum of the first 3 elements:  50
+The sum of the first 4 elements:  54
+The sum of the first 5 elements:  62
+The sum of the first 8 elements:  668
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example-7-(Question-10,-Section-5.4),-A-Recursive-Algorithm-for-Finding-the-Maximum-in-a-Sequence-of-Ints">Example 7 (Question 10, Section 5.4), A Recursive Algorithm for Finding the Maximum in a Sequence of Ints<a class="anchor-link" href="#Example-7-(Question-10,-Section-5.4),-A-Recursive-Algorithm-for-Finding-the-Maximum-in-a-Sequence-of-Ints">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">max_recursive</span><span class="p">(</span><span class="n">S</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">S</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">S</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">max_recursive</span><span class="p">(</span><span class="n">S</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="n">S</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">m</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">S</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">S1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">303</span><span class="p">]</span>
+<span class="k">print</span> <span class="s">&quot;Max in S1: &quot;</span><span class="p">,</span> <span class="n">max_recursive</span><span class="p">(</span><span class="n">S1</span><span class="p">)</span>
+
+<span class="n">S2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">404</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<span class="k">print</span> <span class="s">&quot;Max in S2: &quot;</span><span class="p">,</span> <span class="n">max_recursive</span><span class="p">(</span><span class="n">S2</span><span class="p">)</span>
+
+<span class="n">S3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">404</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">560</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<span class="k">print</span> <span class="s">&quot;Max in S3: &quot;</span><span class="p">,</span> <span class="n">max_recursive</span><span class="p">(</span><span class="n">S3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Max in S1:  303
+Max in S2:  404
+Max in S3:  560
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Proving-Recursive-Algorithms-to-be-Correct">Proving Recursive Algorithms to be Correct<a class="anchor-link" href="#Proving-Recursive-Algorithms-to-be-Correct">&#182;</a></h3><p>How would one prove that the recursive algorithm for finding the sum of the first positive integers, for example, is correct? (Example 6). The argument can go like this: <em>Basis Step:</em> The sum of the first positive integer is 1, which is the answer the algorithm returns when n = 1 and the sequence <code>S = [1, 2, 3, ..., n]</code> is passed to it. <em>Inductive Step:</em> Now assume the algorithm is correct for <code>n = k</code>. If <code>n = k + 1</code>, the the <code>else</code> clause in the algorithm is executed and the <code>k + 1</code>-st integer is added to the sum of the first <code>k</code> integers, which is assumed to be correct. Therefore, the algorithm correctly finds the sum of the first <code>k + 1</code> integers.</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
